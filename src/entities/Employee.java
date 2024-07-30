@@ -1,5 +1,8 @@
 package entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Employee {
     private String name;
     private Integer hour;
@@ -37,5 +40,10 @@ public class Employee {
     public Double payment(){
         return valuePerHour * hour;
     }
-
+    @Override
+    public String toString() {
+        return name+
+                " - $ "+
+                payment();
+    }
 }
